@@ -1,0 +1,33 @@
+{
+	"name": "node-red-contrib-ui-digital-display",
+	"description": "A digital display, with adjustable number of digits and decimal places, for the Node-RED Dashboard",
+	"keywords": [
+		"dashboard",
+		"digital display",
+		"node-red",
+		"time",
+		"ui"
+	],
+	"version": "1.0.0",
+	"license": "MIT",
+	"author": {
+		"name": "Patrick Knabe",
+		"email": "patrickknabe@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/patrickknabe/node-red-contrib-ui-digital-display.git"
+	},
+	"bugs": {
+		"url": "https://github.com/patrickknabe/node-red-contrib-ui-digital-display/issues"
+	},
+	"homepage": "https://github.com/patrickknabe/node-red-contrib-ui-digital-display#readme",
+	"peerDependencies": {
+		"node-red-dashboard": "2.23.x"
+	},
+	"node-red": {
+		"nodes": {
+			"ui_digital_display": "display.js"
+		}
+	}
+}
