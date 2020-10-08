@@ -20,7 +20,9 @@
 
 				return valid;
 			} },
-			height: { value: 0 }
+			height: { value: 0 },
+			digits: { value: 2, validate: digits => ( +digits || 0 ) >= 1 && ( +digits || 0 ) <= 10 },
+			decimals: { value: 1, validate: decimals => ( +decimals || 0 ) >= 0 && ( +decimals || 0 ) <= 9 }
 		},
 		label: function() {
 			return this.name || 'digital display';
@@ -31,7 +33,7 @@
 				height: "#node-input-height",
 				group: "#node-input-group"
 			} );
-		}
+		},
 	} );
 
 </script>
@@ -52,6 +54,15 @@
 		 <input type="hidden" id="node-input-height" />
 		 <button id="node-input-size" class="editor-button"></button>
 	 </div>
+	 <br />
+	 <div class="form-row">
+		<label for="node-input-digits"><i class="fa fa-fw fa-bars"></i> Digits</label>
+		<input type="number" id="node-input-digits" min="1" max="10" style="width: 35%;" />
+	</div>
+	<div class="form-row">
+		<label for="node-input-decimals"><i class="fa fa-fw fa-bars"></i> Decimals</label>
+		<input type="number" id="node-input-decimals" min="0" max="9" style="width: 35%;" />
+	</div>
 </script>
 
 <script type="text/html" data-help-name="ui_digital_display">
