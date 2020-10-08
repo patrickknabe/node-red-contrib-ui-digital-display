@@ -91,7 +91,7 @@ module.exports = RED => {
 								}
 							} );
 
-							if( idx === $scope.digits - $scope.decimals - 1 ) {
+							if( $scope.decimals > 0 && idx === $scope.digits - $scope.decimals - 1 ) {
 								$( digit ).find( 'path:last-child' ).css( 'fill', 'var( --nr-dashboard-pageTitlebarBackgroundColor )' );
 							} else {
 								$( digit ).find( 'path:last-child' ).css( 'fill', 'var( --nr-dashboard-groupBackgroundColor )' );
