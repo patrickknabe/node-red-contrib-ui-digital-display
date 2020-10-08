@@ -1,6 +1,6 @@
 {
 	"name": "node-red-contrib-ui-digital-display",
-	"description": "A digital display, with adjustable number of digits and decimal places, for the Node-RED Dashboard",
+	"description": "A digital display, with adjustable number of digits and decimals, for the Node-RED Dashboard.",
 	"keywords": [
 		"dashboard",
 		"digital display",
@@ -23,7 +23,7 @@
 	},
 	"homepage": "https://github.com/patrickknabe/node-red-contrib-ui-digital-display#readme",
 	"peerDependencies": {
-		"node-red-dashboard": "2.23.x"
+		"node-red-dashboard": "~2.23.2"
 	},
 	"node-red": {
 		"nodes": {
