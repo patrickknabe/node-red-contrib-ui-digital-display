@@ -51,7 +51,7 @@ module.exports = RED => {
 							'9': [ true, true, true, true, false, true, true ]
 						};
 
-						let value = '';
+						let value = '---';
 
 						if( msg ) {
 							switch( typeof msg.payload ) {
@@ -68,16 +68,12 @@ module.exports = RED => {
 									break;
 
 							}
-
-							value = value.replace( '.', '' );
-
-							if( value.length > $scope.digits ) {
-								value = '';
-							}
 						}
 
-						if( value === '' ) {
-							value = ''.padStart( $scope.digits, '-' );
+						value = value.replace( '.', '' );
+						
+						if( value.length > $scope.digits ) {
+							value = value.substr( -$scope.digits );
 						} else {
 							value = value.padStart( $scope.digits );
 						}
@@ -91,7 +87,7 @@ module.exports = RED => {
 								}
 							} );
 
-							if( $scope.decimals > 0 && idx === $scope.digits - $scope.decimals - 1 ) {
+							if( $scope.decimals > 0 && value.charAt( idx ) !== '-' && idx === $scope.digits - $scope.decimals - 1 ) {
 								$( digit ).find( 'path:last-child' ).css( 'fill', 'var( --nr-dashboard-pageTitlebarBackgroundColor )' );
 							} else {
 								$( digit ).find( 'path:last-child' ).css( 'fill', 'var( --nr-dashboard-groupBackgroundColor )' );
