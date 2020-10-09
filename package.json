@@ -1,13 +1,7 @@
 {
 	"name": "node-red-contrib-ui-digital-display",
 	"description": "A digital display, with adjustable number of digits and decimals, for the Node-RED Dashboard.",
-	"keywords": [
-		"dashboard",
-		"digital display",
-		"node-red",
-		"time",
-		"ui"
-	],
+	"keywords": [ "dashboard", "digital display", "node-red", "seven segment display", "time", "ui" ],
 	"version": "1.0.0",
 	"license": "MIT",
 	"author": {
