@@ -33,7 +33,7 @@ module.exports = RED => {
 				order: config.order,
 				beforeEmit: msg => ( { msg } ),
 				initController: $scope => {
-					$( () => $scope.msg = { payload: 0 } );
+					$( () => $scope.msg = $scope.msg || { payload: 0 } );
 
 					$scope.$watch( 'msg', msg => {
 						const pattern = {
