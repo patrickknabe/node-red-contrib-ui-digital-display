@@ -1,6 +1,6 @@
 # Changelog
 
-## [v1.0.0] - 2020-09-30
+## [v1.0.0] - 2020-10-09
 
 ### Added
 - Functional digital display for the Node-RED Dashboard
