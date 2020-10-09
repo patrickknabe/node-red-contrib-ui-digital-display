@@ -27,8 +27,8 @@ module.exports = RED => {
 						</svg>
 					</div>
 				`,
-				width: config.width,
-				height: +config.height || RED.nodes.getNode( config.group ).config.width,
+				width: +config.width || RED.nodes.getNode( config.group ).config.width,
+				height: +config.height || 1,
 				group: config.group,
 				order: config.order,
 				beforeEmit: msg => ( { msg } ),

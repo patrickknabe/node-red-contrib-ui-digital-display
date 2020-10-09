@@ -21,8 +21,10 @@
 				return valid;
 			} },
 			height: { value: 0 },
-			digits: { value: 2, validate: digits => ( +digits || 0 ) >= 1 && ( +digits || 0 ) <= 10 },
-			decimals: { value: 1, validate: decimals => ( +decimals || 0 ) >= 0 && ( +decimals || 0 ) <= 9 }
+			digits: { value: 5, validate: digits => ( +digits || 0 ) >= 1 && ( +digits || 0 ) <= 10 },
+			decimals: { value: 1, validate: function( decimals ) {
+				return ( +decimals || 0 ) >= 0 && ( +decimals || 0 ) < ( +$( '#node-input-digits' ).val() || this.digits );
+			} }
 		},
 		label: function() {
 			return this.name || 'digital display';
