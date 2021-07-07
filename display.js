@@ -14,8 +14,8 @@ module.exports = RED => {
 			this.on( 'close', ui.addWidget( {
 				node: this,
 				format: `
-					<div id="ui_digital_display_{{ $id }}" style="display: flex; height: 100%; justify-content: flex-end;" ng-init="digits = ${ +config.digits || 0 }; decimals = ${ +config.decimals || 0 };">
-						<svg style="height: 100%;" version="1.1" viewBox="0 0 660 1000" xmlns="http://www.w3.org/2000/svg" ng-repeat="x in [].constructor( ${ +config.digits || 0 } ) track by $index">
+					<div id="ui_digital_display_{{ $id }}" style="display: flex; height: 100%; justify-content: flex-end" ng-init="digits = ${ +config.digits || 0 }; decimals = ${ +config.decimals || 0 }">
+						<svg version="1.1" viewBox="0 0 660 990" xmlns="http://www.w3.org/2000/svg" style="height: -webkit-fill-available" ng-repeat="x in [].constructor( ${ +config.digits || 0 } ) track by $index">
 							<path d="m164.59 7.6241e-5h332.31l33.735 36.176-84.078 78.404h-247.65l-73.113-78.404z" />
 							<path d="m87.115 72.249 75.498 80.961-16.917 241.93-74.915 69.86-38.525-41.313 22.462-321.23z" />
 							<path d="m454.96 389.16 15.725-224.88 95.964-89.488 19.36 20.761-23.784 340.13-34.168 31.863z" />
